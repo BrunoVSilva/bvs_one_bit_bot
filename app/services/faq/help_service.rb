@@ -13,6 +13,7 @@ class HelpService
     response += "`Lista as perguntas e respostas com aquela hashtag`\n\n"
     response += "Perguntas e Respostas\n"
     response += "`Mostra a lista de perguntas e respostas`\n\n"
+    response += "*bold _italic bold ~italic bold strikethrough~ __underline italic bold___ bold*"
     response
   end
 end
