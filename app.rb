@@ -23,15 +23,15 @@ class App < Sinatra::Base
       response = InterpretService.call(result["action"], result["parameters"])
     end
 
-    content_type :json, charset: 'utf-8'
-      { "fulfillmentText": response,
-        "payload": {
-          "telegram":{
-            "text": response,
-            "parse_mode": "Markdown"
-          }
-        }
-      }.to_json
+    content_type :json, charset: 'utf-8' 
+    { "fulfillmentText": response, 
+      "payload": { 
+          "telegram": { 
+              "text": response, 
+              "parse_mode": "Markdown" 
+           } 
+       } 
+    }.to_json
   end
 
 end
